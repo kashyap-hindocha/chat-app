@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "client-install": "npm install --prefix public",
+    "express": "npm install express",
     "server": "nodemon server.js",
     "start": "nodemon index.js",
     "public": "npm start --prefix public",
