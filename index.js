@@ -9,7 +9,7 @@ require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
-app.use("localhost:5000/api/auth", userRoutes);
+app.use("localhost:49341/api/auth", userRoutes);
 
 //serve static assets if in production
 if(process.env.NODE_ENV === 'production'){
