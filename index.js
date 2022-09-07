@@ -21,13 +21,13 @@ if(process.env.NODE_ENV === 'production'){
     })
 }
 
-// const mongoURL = () => {
-//     if(proccess.env.ENVIRONMENT === 'local'){
-//         return process.env.MONGO_URL;
-//     }else if(process.env.ENVIRONMENT === 'production'){
-//         return process.env.HEROKU_MONGO_URL;
-//     }
-// };
+const mongoURL = () => {
+    if(proccess.env.ENVIRONMENT === 'local'){
+        return process.env.MONGO_URL;
+    }else if(process.env.ENVIRONMENT === 'production'){
+        return process.env.HEROKU_MONGO_URL;
+    }
+};
 
 mongoose.connect(process.env.HEROKU_MONGO_URL, {
     useNewUrlParser:true,
