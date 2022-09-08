@@ -11,12 +11,9 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
-mongoose.set('bufferCommands', false);
-mongoose
-  .connect("mongodb+srv://kashyap:Kp%4024698@cluster0.mfu4ojl.mongodb.net/cluster0", {
+mongoose.connect("mongodb+srv://kashyap:Kp@24698@cluster0.mfu4ojl.mongodb.net/cluster0", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true
   })
   .then(() => {
     console.log("DB Connetion Successfull");
@@ -30,14 +27,14 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
 //Serve static assets if in production
-if(process.env.NODE_ENV === 'production'){
+// if(process.env.NODE_ENV === 'production'){
   //Set static filder
   app.use(express.static('public/build'));
 
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'build', 'index.html'));
   }); 
-}
+// }
 
 const port = process.env.PORT || 5000;
 
