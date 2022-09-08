@@ -13,7 +13,7 @@ app.use(express.json());
 
 mongoose.set('bufferCommands', false);
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect("mongodb+srv://kashyap:Kp@24698@cluster0.mfu4ojl.mongodb.net/cluster0", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
