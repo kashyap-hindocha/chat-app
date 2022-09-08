@@ -11,6 +11,7 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
+mongoose.set('bufferCommands', false);
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
