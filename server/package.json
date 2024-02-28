@@ -9,8 +9,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm start -- prefix public",
-    "dev": "concurrently \"npm run server\"npm run public\"",
-    "build": "tsc"
+    "dev": "concurrently \"npm run server\"npm run public\""
   },
   "author": "Kashyap hindocha",
   "license": "MIT",
