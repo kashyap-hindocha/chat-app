@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "MERN-chat-app",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "client-install": "npm install --prefix public",
     "start": "node index.js",
