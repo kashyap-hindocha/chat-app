@@ -1,19 +1,21 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const authRoutes = require("./routes/auth");
-const messageRoutes = require("./routes/messages");
+import express from 'express'
+import cors from 'cors';
+import mongoose from 'mongoose';
+import authRoutes from "./routes/auth";
+import messageRoutes from "./routes/messages";
+import socket from "socket.io";
+import path from 'path';
+import dotenv from 'dotenv'
+
 const app = express();
-const socket = require("socket.io");
-const path = require('path');
-require("dotenv").config();
+dotenv.config();
 
 app.use(cors());
 app.use(express.json());
 
 
 
-mongoose.connect("mongodb+srv://kashyap:Kp@24698@cluster0.mfu4ojl.mongodb.net/cluster0", {
+mongoose.connect("mongodb+srv://kashyap:Kp@24698@cluster0.mfu4ojl.mongodb.net/chat-app", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
