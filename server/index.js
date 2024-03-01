@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 
-mongoose.connect("mongodb+srv://kashyap:Kp@24698@cluster0.mfu4ojl.mongodb.net/cluster0", {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
